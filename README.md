@@ -26,7 +26,7 @@ As of now, we have a database consisting of cleaned MovieLens 1M data. Our datab
 To do this classification, we would need to loop through all available movies and run our classifier for each one. This would prove to be incredibly time intensive compared to some other approaches.
 This algorithm would be best suited for a Deep Learning approach as it only depends on the individual user, unlike others which relate users and base recommendations dynamically. We could feed the model user information and their rankings for a specific movie, resulting in a model that can learn to predict ratings for a movie based on the users characteristics. For this to work, we would need a unique model for each movie which could result in a large amount of storage being used up. Another approach would be to use linear regression with multiple variables, although this may be less accurate.
 
-- Movie Similarity/Content based algorithms
+- Movie Similarity/Content based algorithms 
 
 - Collabrative Filtering
 
