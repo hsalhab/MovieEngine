@@ -14,9 +14,9 @@ We are using a data set that contains ratings from different users on different 
 
 As of now, we have a database consisting of cleaned MovieLens 1M data. Our database consists of three tables: Movies, Users, Ratings. The table schemas are listed below.
 
-Movies:   id | title | genre
-Users:	id | gender | age | occupation | zipcode
-Ratings: user_id | movie_id | rating | timestamp
+**Movies** id | title | genre
+**Users**	id | gender | age | occupation | zipcode
+**Ratings** user_id | movie_id | rating | timestamp
 
 ## Recommendation Engine
 
