@@ -43,9 +43,12 @@ The simplest algorithm computes cosine or correlation similarity of rows (users)
 Matrix factorization
 Matrix factorization based methods attempt to reduce dimensionality of the interaction matrix and approximate it by two or more small matrices with k latent components. By multiplying corresponding row and column you predict rating of item by user. Training error can be obtained by comparing non empty ratings to predicted ratings. One can also regularize training loss by adding a penalty term keeping values of latent vectors low.
 
+![](http://5b0988e595225.cdn.sohucs.com/images/20180611/75341ecc471f450e97dd4635f6b94071.jpeg)
+
 Association rules can also be used for recommendation. Items that are frequently consumed together are connected with an edge in the graph. Mining rules is not very scalable. The APRIORI algorithm explores the state space of possible frequent itemsets and eliminates branches of the search space, that are not frequent. Frequent itemsets are used to generate rules and these rules generate recommendations.
 This method is especially effective in visualization
 
+![](https://cdn-images-1.medium.com/max/1600/0*xkxhJLeXbka8k1NN)S
 
 ### Evaluation
 
