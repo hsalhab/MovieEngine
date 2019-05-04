@@ -35,14 +35,20 @@ popularity_model = graphlab.popularity_recommender.create(train_data, user_id='u
 #k=5 specifies top 5 recommendations to be given
 popularity_recomm = popularity_model.recommend(users=range(1,6),k=5)
 popularity_recomm.print_rows(num_rows=25)
+print("ok lets go")
 ratings_base.groupby(by='movie_id')['rating'].mean().sort_values(ascending=False).head(20)
+
+popularity_recomm.show()
+raw_input("Press enter to continue ;)")
+
 #Train Model
 item_sim_model = graphlab.item_similarity_recommender.create(train_data, user_id='user_id', item_id='movie_id', target='rating', similarity_type='pearson')
 
 #Make Recommendations:
 item_sim_recomm = item_sim_model.recommend(users=range(1,6),k=5)
-print("FFFFF")
+
 item_sim_recomm.print_rows(num_rows=25)
 model_performance = graphlab.compare(test_data, [popularity_model, item_sim_model])
-graphlab.canvas.set_target('browser', 1222)
-graphlab.show_comparison(model_performance,[popularity_model, item_sim_model])
+item_sim_recomm.show()
+
+raw_input("Press enter to exit ;)")
