@@ -41,6 +41,8 @@ item_sim_model = graphlab.item_similarity_recommender.create(train_data, user_id
 
 #Make Recommendations:
 item_sim_recomm = item_sim_model.recommend(users=range(1,6),k=5)
+print("FFFFF")
 item_sim_recomm.print_rows(num_rows=25)
 model_performance = graphlab.compare(test_data, [popularity_model, item_sim_model])
+graphlab.canvas.set_target('browser', 1222)
 graphlab.show_comparison(model_performance,[popularity_model, item_sim_model])
