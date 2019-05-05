@@ -2,8 +2,7 @@
 
 ## Vision
 
-- The big idea:  
-Our big idea was to create a movie recommendation system that would use different attributes of users and movies to create the most appropriate movie recommendation for a given user.
+- The big idea: Our big idea was to create a movie recommendation system that would use different attributes of users and movies to create the most appropriate movie recommendation for a given user.
 
 - Progress: 
 We did make measurable progress towards this idea. We ended up creating two recommendation systems that used two different algorithms, one of them used k-means and the other one used collaborative filtering from movie-to-movie. We visualize the recommendations given by each of the systems and we concluded that they do give appropriate recommendations to each user.
