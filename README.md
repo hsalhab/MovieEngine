@@ -1,3 +1,55 @@
+﻿## Vision
+
+### The big idea 
+Our big idea was to create a movie recommendation system that would use different attributes of users and movies to create the most appropriate movie recommendation for a given user.
+
+### Progress
+We did make measurable progress towards this idea. We ended up creating two recommendation systems that used two different algorithms, one of them used k-means and the other one used collaborative filtering from movie-to-movie. We visualize the recommendations given by each of the systems and we concluded that they do give appropriate recommendations to each user.
+
+## Data
+We used a dataset containing 1 million ratings from 6000 users on 4000 movies. The data was already cleaned and stored in a csv file. We found this data in the movielens website and it is publicly available to everyone.
+
+### Relative to its size was there enough information contained within it? 
+Yes, the one million ratings was enough information for us to appropriately train the models, as well as to see certain trends in the data when we visualized it.
+
+### Were you able to find what you wanted in the data? 
+We struggles a little to find certain trends in the data at the beginning. We first look at how certain factors such as gender and occupation affect the type of movies a person prefers, but we did not find any clear trends. However, when we looked at age, we found some interesting trends, such as the fact that people tend to like children movies less as they get older. According to how much of an influence each of the factors analyzed had on movie preferences, we give them certain weights when creating our models.
+
+### How did you collect, clean, and integrate it?
+As mentioned previously, the data was already cleaned and stored in a csv file. We did not have to collect it nor scrape it.
+
+## Methodology
+### What did you do with your data? 
+We created two recommendations systems and then compared their results. The first model was implemented using a KNN algorithm. For this model we created a matrix in which each vector represents a movie, and each index in that vectors represents the rating that each of the users gave that movie. We then measured the distance between each of those movie vector and looked at the closest movie vectors.
+
+### What techniques were used to pick apart the data? 
+The data was in csv files, so it was not difficult to use python to read through the files and extract featured necessary to our analysis. After extracting the data from the three major files (u.data, u.item, and  u.user) we created one master array that bridged together the three files using the foreign keys. For example, each u.data row included a key for a user, which we used to grab the user data from u.user and append it to the data array, creating a master array for that data point.
+### Did you use ML? Stats? 
+Yes. As we already mentioned previously we used a KNN algorithm and we also used various statistical measures to compare the accuracy of each of the models, such as Mean Squared Error and Cosine Similarity
+
+We used Mean Squared Error to measure the performance of both models in the test data. Cosine similarity was used to measure the similarity between each of the movie vectors in the KNN model.
+
+### How did you visualize your data?
+We used mostly stacked charts and a TSNE plot to visualize our data. We used the stacked charts to visualize the raw data, and the TSNE plot to visualize the results for our models.
+
+
+### Visualizations:
+
+
+![](https://i.imgur.com/v3zZZPa.png)
+
+![](https://i.imgur.com/eXPZQ9w.png)
+
+![](https://i.imgur.com/X195dXO.png)
+
+### Results
+We analyzed the data in order to find some correlation between some of user’s characteristics and their movie preferences. We first looked at occupation and gender, but we did not find any interesting results. The preferences of movies across all occupations and genders was very even. However, we did find some interesting correlations between age and movie preferences. We found that people tend to like children movies less as they get older, as shown in the second visualization below. Also, we found the opposite correlation between age and drama movies, people tend to like drama movies more as they get older.
+Using this information, we created a movie recommendation system that looks for similarity in movies, based on reviews by users, and returns the top 5 most similarly reviewed movies. In doing so, we transpose the movie representations into a 2D plane which makes it easy to visually display movie similarities.
+
+
+
+# Previous Posts
+
 ## Intro
 
 We will develop a movie recommendation system such as the ones used in Netflix, Hulu and Youtube, that we will then try to adapt to other purposes such as book recommendations or even music recommendation system. Given the large amounts of data available nowadays regarding the preferences and habits of users we are able to create systems that infer the likes and dislikes of people and determine what sort of movies/readings/music the users would be fond of.
